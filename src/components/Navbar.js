@@ -5,7 +5,7 @@ import PersonIcon from '@material-ui/icons/Person';
 function Navbar() {
     return (
         <div className="navbar">
-            <h2><PersonIcon /> Nirmit Sabharwal</h2>
+            <h2 id="nav"><PersonIcon /> Nirmit Sabharwal</h2>
         </div>
     )
 }

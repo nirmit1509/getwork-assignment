@@ -4,10 +4,11 @@
     height: 50px;
     width: 100vw;
     position: fixed;
-    background-color: white;
+    /* background-color: white; */
+    background-color: green;
 }
 
-h2 {
+#nav {
     text-align: right;
     margin-right: 40px;
     color: rgba(128, 128, 128, 0.699);
