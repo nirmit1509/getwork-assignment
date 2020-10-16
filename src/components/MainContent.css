@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     width: 78vw;
+    min-width: 500px;
     margin-top: 55px;
     margin-left: 20vw;
 }
@@ -36,6 +37,7 @@
 
 .search__option > input {
     margin-left: 20px;
+    font-size: 28px;
     border: none;
     border-bottom-style: ridge;
     border-radius: 5px;
