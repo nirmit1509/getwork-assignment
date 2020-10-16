@@ -1,0 +1,10 @@
+.app {
+    display: grid;
+    background-color: #ffffff;
+    height: 100vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.app__body {
+    display: flex;
+}

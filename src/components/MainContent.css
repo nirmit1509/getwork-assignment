@@ -1,0 +1,8 @@
+.main__content {
+    display: flex;
+    flex-direction: column;
+    width: 78vw;
+    background-color: aqua;
+    margin-top: 50px;
+    margin-left: 20vw;
+}
