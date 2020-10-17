@@ -1,7 +1,32 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import './MainContent.css';
+import Table from './Table';
 
 function MainContent() {
+
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        fetch('http://dummy.restapiexample.com/api/v1/employees')
+            .then(res => res.json())
+            .then(json => {
+                let tmpArray = []
+                for (var i = 0; i < json.data.length; i++) {
+                    let obj = {
+                        id: parseInt(json.data[i].id),
+                        employee_name: json.data[i].employee_name,
+                        employee_age: parseInt(json.data[i].employee_age),
+                        employee_salary: parseInt(json.data[i].employee_salary),
+                        profile_image: json.data[i].profile_image,
+                    }
+                    tmpArray.push(obj)
+                }
+                setData(tmpArray);
+            })
+    }, []);
+
+    console.log(data);
+
     return (
         <div className="main__content">
             <div className="main__content__top">
@@ -22,13 +47,13 @@ function MainContent() {
                 <span> Rejected</span>
             </div>
             
-            <div className="search__option">
+            {/* <div className="search__option">
                 <input placeholder="Search"></input>
                 <button id="secondary">Score With AI</button>
-            </div>
+            </div> */}
             
             <div className="table">
-
+                <Table rows={data} />
             </div>
         </div>
     )

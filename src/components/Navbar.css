@@ -3,10 +3,12 @@
     flex-direction: row;
     justify-content: space-between;
     place-items: center;
-    height: 50px;
+    height: 60px;
     width: 100vw;
     position: fixed;
+    z-index: 50;
     background-color: white;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.699);
 }
 
 #nav {
