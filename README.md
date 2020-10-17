@@ -9,60 +9,53 @@ In the project directory, you can run:
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
 
-### `npm test`
+The website is mainly divided into 2 components : 
+1. Navbar
+2. Main
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![Screenshot (26)](https://user-images.githubusercontent.com/55524764/96333563-56099f80-1088-11eb-8235-5f1c87ac82bc.png)
 
-### `npm run build`
+Main is further divided into 2 components - 
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2.1. Sidebar
+2.2. MainContent
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+o In Navbar, there is company logo and username visible on the top.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+o In Sidebar, all the list items are static. A nice hover effect is enabled on these list items.
 
-### `npm run eject`
+o In MainContent, all the sections above table are purely static and resembles the one provided in the assignment.
+The Employee data for table has been populated from the API : http://dummy.restapiexample.com/api/v1/employees
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Features implemented using table are-
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+i) Sorting: By default, it is sorted according to employee IDs (ascending order). Clicking on any column name will sort the data according to that particular field. Nice set of material Icons are used to display ORDER of sorting.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![Screenshot (28)](https://user-images.githubusercontent.com/55524764/96333594-7fc2c680-1088-11eb-9fb6-a9fb36280d2a.png)
+The rows are increasingly sorted depending upon the salary of employee.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+ii) Searching: You can search any text or number, and the relevant data will be available on the table.
 
-### Analyzing the Bundle Size
+![Screenshot (27)](https://user-images.githubusercontent.com/55524764/96333597-84877a80-1088-11eb-9250-88f436228fe5.png)
+As soon as we type "Ga" in the search box, 2 records are filtered.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-### Making a Progressive Web App
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+iii) Pagination: The no. of records to be displayed on the table can be adjusted. In this web-app, you have 2 options- you can either display 5 rows per page or 10 rows per page.
 
-### Advanced Configuration
+![Screenshot (29)](https://user-images.githubusercontent.com/55524764/96333665-ecd65c00-1088-11eb-8b75-e4f60e6f5bc2.png)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
 
-### Deployment
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+iv) Selecting rows: You can select any no. of rows using the checkbox provided. After selecting desired no of rows, press "NOTIFICATION IMPORTANT" icon on the right top corner of the table. Pressing this icon will pop up an alert with details of selected rows.
 
-### `npm run build` fails to minify
+![Screenshot (30)](https://user-images.githubusercontent.com/55524764/96333672-f4960080-1088-11eb-8c52-f307cc1d127d.png)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+![Screenshot (31)](https://user-images.githubusercontent.com/55524764/96333678-f8c21e00-1088-11eb-8bb6-b32b9579d45f.png)
+You can select/deselect all rows at a time as well.
